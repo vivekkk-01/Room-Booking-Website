@@ -20,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <Root />,
     children: [
       { index: true, element: <Index />, loader: indexLoader },
       { path: "place/:placeId", element: <Place />, loader: placeLoader },
