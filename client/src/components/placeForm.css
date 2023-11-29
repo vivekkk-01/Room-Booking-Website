@@ -1,0 +1,12 @@
+@media screen and (max-width: 700px) {
+  .deleteIcon {
+    right: 3px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .photoContainer {
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+}

@@ -1,0 +1,22 @@
+@media screen and (max-width: 700px) {
+  .nights {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bookingPlace {
+    grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: none !important;
+  }
+
+  .bookingPlace-img {
+    border-radius: 0 !important;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+  }
+
+  .bookingPlace-info {
+    padding: .6rem;
+  }
+}

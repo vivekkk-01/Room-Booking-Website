@@ -1,0 +1,10 @@
+@media screen and (max-width: 400px) {
+  .myPlace {
+    flex-direction: column !important;
+  }
+
+  .place-img-container {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
