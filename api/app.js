@@ -44,5 +44,5 @@ app.use((err, req, res, next) => {
 
 mongoose.connect(process.env.MONGO_URL).then(() => {
   console.log("Backend server is running...");
-  app.listen(8080);
+  app.listen(process.env.PORT);
 });
