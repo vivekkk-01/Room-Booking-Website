@@ -116,8 +116,6 @@ exports.putPlace = async (req, res, next) => {
       return next(error);
     }
 
-    console.log(place);
-
     place.set({
       title,
       address,
