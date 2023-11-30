@@ -5,7 +5,7 @@ import "./header.css";
 const Header = () => {
   const [user, setUser] = useState(null);
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("user")));
+    setUser(JSON.parse(localStorage.getItem("landbnbUser")));
   }, []);
   return (
     <header className="flex items-center justify-between">
