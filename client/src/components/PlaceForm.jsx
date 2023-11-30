@@ -1,4 +1,4 @@
-import { CircularProgress } from "@mui/material";
+import ClipLoader from "react-spinners/ClipLoader";
 import React, { useState, useEffect } from "react";
 import { useNavigate, useNavigation, useParams } from "react-router-dom";
 import "./placeForm.css";
@@ -450,7 +450,11 @@ const PlaceForm = ({ place }) => {
         onClick={saveHandler}
         className="my-4 primary"
       >
-        {isSubmitting ? <CircularProgress size="18px" /> : "Save"}
+        {isSubmitting ? (
+          <ClipLoader loading={isSubmitting} size={22} color="#fff" />
+        ) : (
+          "Save"
+        )}
       </button>
     </form>
   );

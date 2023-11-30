@@ -1,4 +1,4 @@
-import { CircularProgress } from "@mui/material";
+import ClipLoader from "react-spinners/ClipLoader";
 import React from "react";
 import { Form, json, Link, redirect } from "react-router-dom";
 import { useNavigation } from "react-router-dom";
@@ -6,6 +6,7 @@ import { useNavigation } from "react-router-dom";
 const Login = () => {
   const submit = useNavigation();
   const isSubmitting = submit.state === "submitting";
+  console.log(isSubmitting, "is it submitting?");
   return (
     <div
       style={{ height: "calc(100vh - 30vh)" }}
@@ -17,7 +18,7 @@ const Login = () => {
         <input type="password" name="password" placeholder="password" />
         <button className="primary">
           {isSubmitting ? (
-            <CircularProgress size="18px" color="#fff" />
+            <ClipLoader loading={isSubmitting} size={22} color="#fff" />
           ) : (
             "Login"
           )}

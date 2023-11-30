@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Link, redirect, useNavigation } from "react-router-dom";
-import { CircularProgress } from "@mui/material";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const Register = () => {
   const submit = useNavigation();
@@ -17,7 +17,7 @@ const Register = () => {
         <input type="password" name="password" placeholder="password" />
         <button className="primary" disabled={isSubmitting}>
           {isSubmitting ? (
-            <CircularProgress size="18px" color="#fff" />
+            <ClipLoader loading={isSubmitting} size={22} color="#fff" />
           ) : (
             "Register"
           )}

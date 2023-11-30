@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CircularProgress } from "@mui/material";
+import ClipLoader from "react-spinners/ClipLoader";
 import { redirect, useLocation, useNavigate } from "react-router-dom";
 import { differenceInDays } from "date-fns";
 import { useEffect } from "react";
@@ -265,7 +265,7 @@ const Place = () => {
             className="bg-primary p-2 text-white text-center w-full rounded-2xl"
           >
             {isSubmitting && (
-              <CircularProgress size="18px" style={{ color: "#fff" }} />
+              <ClipLoader loading={isSubmitting} size={22} color="#fff" />
             )}
             {!isSubmitting && "Book this place"}
             {!isSubmitting && checkIn && checkOut && numberOfDays > 0 && (
