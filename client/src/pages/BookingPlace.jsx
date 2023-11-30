@@ -43,7 +43,7 @@ const BookingPlace = () => {
                 className="w-screen object-contain"
                 src={
                   photo.slice(0, 7) === "uploads"
-                    ? "http://localhost:8080/" + photo
+                    ? "https://room-booking-backend-iq12.onrender.com/" + photo
                     : photo
                 }
               />
@@ -159,7 +159,7 @@ const BookingPlace = () => {
               className="cursor-pointer rounded-l-3xl w-full h-full object-cover aspect-square"
               src={
                 data.place.photos[0].slice(0, 7) === "uploads"
-                  ? "http://localhost:8080/" + data.place.photos[0]
+                  ? "https://room-booking-backend-iq12.onrender.com/" + data.place.photos[0]
                   : data.place.photos[0]
               }
             />
@@ -170,7 +170,7 @@ const BookingPlace = () => {
               className="cursor-pointer w-full h-full object-cover aspect-square"
               src={
                 data.place.photos[1]?.slice(0, 7) === "uploads"
-                  ? "http://localhost:8080/" + data.place.photos[1]
+                  ? "https://room-booking-backend-iq12.onrender.com/" + data.place.photos[1]
                   : data.place.photos[1]
               }
             />
@@ -179,7 +179,7 @@ const BookingPlace = () => {
               className="cursor-pointer w-full h-full object-cover aspect-square"
               src={
                 data.place.photos[2]?.slice(0, 7) === "uploads"
-                  ? "http://localhost:8080/" + data.place.photos[2]
+                  ? "https://room-booking-backend-iq12.onrender.com/" + data.place.photos[2]
                   : data.place.photos[2]
               }
             />
@@ -218,7 +218,7 @@ export const loader = async ({ params }) => {
   const userObj = JSON.parse(localStorage.getItem("user"));
   const bookingId = params.bookingId;
   const response = await fetch(
-    `http://localhost:8080/booking/${userObj.userId}/${bookingId}`,
+    `https://room-booking-backend-iq12.onrender.com/booking/${userObj.userId}/${bookingId}`,
     {
       headers: {
         authorization: `Bearer ${userObj.accessToken}`,

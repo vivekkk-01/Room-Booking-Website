@@ -13,7 +13,7 @@ const Index = () => {
                 className="rounded-2xl object-cover aspect-square"
                 src={
                   place.photos[0].slice(0, 7) === "uploads"
-                    ? "http://localhost:8080/" + place.photos[0]
+                    ? "https://room-booking-backend-iq12.onrender.com/" + place.photos[0]
                     : place.photos[0]
                 }
                 alt=""
@@ -34,6 +34,6 @@ const Index = () => {
 export default Index;
 
 export const loader = async () => {
-  const response = await fetch("http://localhost:8080/place");
+  const response = await fetch("https://room-booking-backend-iq12.onrender.com/place");
   return response;
 };

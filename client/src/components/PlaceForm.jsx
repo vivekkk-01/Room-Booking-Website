@@ -87,11 +87,11 @@ const PlaceForm = ({ place }) => {
     body.append("checkOut", checkOut);
     body.append("maxGuests", maxGuests);
     body.append("price", price);
-    let url = "http://localhost:8080/place";
+    let url = "https://room-booking-backend-iq12.onrender.com/place";
     let method = "POST";
 
     if (placeId) {
-      url = `http://localhost:8080/place/${place._id}`;
+      url = `https://room-booking-backend-iq12.onrender.com/place/${place._id}`;
       method = "PUT";
     }
 
@@ -154,7 +154,7 @@ const PlaceForm = ({ place }) => {
                 <img
                   src={
                     photo.slice(0, 7) === "uploads"
-                      ? "http://localhost:8080/" + photo
+                      ? "https://room-booking-backend-iq12.onrender.com/" + photo
                       : photo
                   }
                   className="rounded-2xl h-32 w-60 object-cover"

@@ -9,7 +9,7 @@ const BookingPlaces = () => {
       {data.length > 0 && (
         <div className="mt-4">
           {data.map((place) => {
-            return <BookingPlace place={place} />;
+            return <BookingPlace key={place._id} place={place} />;
           })}
         </div>
       )}
@@ -50,7 +50,7 @@ export const loader = async () => {
   const userObj = JSON.parse(localStorage.getItem("user"));
 
   const response = await fetch(
-    "http://localhost:8080/booking/" + userObj.userId,
+    "https://room-booking-backend-iq12.onrender.com/booking/" + userObj.userId,
     {
       headers: {
         authorization: `Bearer ${userObj.accessToken}`,

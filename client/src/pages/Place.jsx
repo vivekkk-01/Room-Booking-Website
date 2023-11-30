@@ -38,14 +38,17 @@ const Place = () => {
       placeId: state._id,
       userId: userObj.userId,
     };
-    const response = await fetch("http://localhost:8080/booking", {
-      method: "POST",
-      headers: {
-        authorization: `Bearer ${userObj.accessToken}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    });
+    const response = await fetch(
+      "https://room-booking-backend-iq12.onrender.com/booking",
+      {
+        method: "POST",
+        headers: {
+          authorization: `Bearer ${userObj.accessToken}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      }
+    );
 
     const resData = await response.json();
     if (!response.ok) {
@@ -81,13 +84,14 @@ const Place = () => {
             </svg>
             Close photos
           </button>
-          {state.photos.map((photo) => {
+          {state.photos.map((photo, index) => {
             return (
               <img
                 className="w-screen object-contain"
+                key={photo + index}
                 src={
                   photo.slice(0, 7) === "uploads"
-                    ? "http://localhost:8080/" + photo
+                    ? "https://room-booking-backend-iq12.onrender.com/" + photo
                     : photo
                 }
               />
@@ -135,7 +139,8 @@ const Place = () => {
               className="cursor-pointer rounded-l-3xl w-full h-full object-cover aspect-square"
               src={
                 state.photos[0].slice(0, 7) === "uploads"
-                  ? "http://localhost:8080/" + state.photos[0]
+                  ? "https://room-booking-backend-iq12.onrender.com/" +
+                    state.photos[0]
                   : state.photos[0]
               }
             />
@@ -146,7 +151,8 @@ const Place = () => {
               className="cursor-pointer w-full h-full object-cover aspect-square"
               src={
                 state.photos[1]?.slice(0, 7) === "uploads"
-                  ? "http://localhost:8080/" + state.photos[1]
+                  ? "https://room-booking-backend-iq12.onrender.com/" +
+                    state.photos[1]
                   : state.photos[1]
               }
             />
@@ -155,7 +161,8 @@ const Place = () => {
               className="cursor-pointer w-full h-full object-cover aspect-square"
               src={
                 state.photos[2]?.slice(0, 7) === "uploads"
-                  ? "http://localhost:8080/" + state.photos[2]
+                  ? "https://room-booking-backend-iq12.onrender.com/" +
+                    state.photos[2]
                   : state.photos[2]
               }
             />

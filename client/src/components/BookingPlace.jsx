@@ -18,7 +18,7 @@ const BookingPlace = ({ place }) => {
           className="bookingPlace-img h-full w-full rounded-l-2xl object-cover"
           src={
             place.place.photos[0].slice(0, 7) === "uploads"
-              ? "http://localhost:8080/" + place.place.photos[0]
+              ? "https://room-booking-backend-iq12.onrender.com/" + place.place.photos[0]
               : place.place.photos[0]
           }
           alt=""

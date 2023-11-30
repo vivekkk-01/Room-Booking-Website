@@ -14,7 +14,7 @@ const Place = ({ place }) => {
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
           src={
             place.photos[0].slice(0, 7) === "uploads"
-              ? "http://localhost:8080/" + place.photos[0]
+              ? "https://room-booking-backend-iq12.onrender.com/" + place.photos[0]
               : place.photos[0]
           }
           alt=""

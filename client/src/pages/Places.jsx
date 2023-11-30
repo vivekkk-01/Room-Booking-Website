@@ -42,7 +42,7 @@ export default Places;
 export const loader = async () => {
   const userObj = JSON.parse(localStorage.getItem("user"));
   const response = await fetch(
-    `http://localhost:8080/place/${userObj.userId}`,
+    `https://room-booking-backend-iq12.onrender.com/place/${userObj.userId}`,
     {
       headers: {
         authorization: `Bearer ${userObj.accessToken}`,

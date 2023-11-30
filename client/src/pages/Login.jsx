@@ -42,7 +42,7 @@ export const action = async ({ request }) => {
     email: data.get("email"),
     password: data.get("password"),
   };
-  const response = await fetch("http://localhost:8080/auth/login", {
+  const response = await fetch("https://room-booking-backend-iq12.onrender.com/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
