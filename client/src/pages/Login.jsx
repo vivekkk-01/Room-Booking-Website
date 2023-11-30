@@ -55,7 +55,7 @@ export const action = async ({ request }) => {
     resData.message = "";
     return null;
   }
-  localStorage.setItem("user", JSON.stringify(resData));
+  localStorage.setItem("landbnbUser", JSON.stringify(resData));
   setTimeout(() => {
     window.location.reload();
   }, 500);
@@ -63,7 +63,7 @@ export const action = async ({ request }) => {
 };
 
 export const loader = async () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("landbnbUser"));
   if (user) {
     return redirect("/account");
   }

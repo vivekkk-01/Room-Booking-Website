@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import "./place.css";
 
 const Place = () => {
-  const userObj = JSON.parse(localStorage.getItem("user"));
+  const userObj = JSON.parse(localStorage.getItem("landbnbUser"));
   const navigate = useNavigate();
   const { state } = useLocation();
   const [showPhotos, setShowPhotos] = useState(false);
@@ -292,7 +292,7 @@ const Place = () => {
 export default Place;
 
 export const loader = () => {
-  const userObj = JSON.parse(localStorage.getItem("user"));
+  const userObj = JSON.parse(localStorage.getItem("landbnbUser"));
   if (!userObj) {
     return redirect("/login");
   }

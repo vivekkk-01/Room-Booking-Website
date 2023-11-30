@@ -40,7 +40,7 @@ const Places = () => {
 export default Places;
 
 export const loader = async () => {
-  const userObj = JSON.parse(localStorage.getItem("user"));
+  const userObj = JSON.parse(localStorage.getItem("landbnbUser"));
   const response = await fetch(
     `https://room-booking-backend-iq12.onrender.com/place/${userObj.userId}`,
     {

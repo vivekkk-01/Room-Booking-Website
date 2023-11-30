@@ -2,10 +2,10 @@ import React from "react";
 import { redirect, useNavigate } from "react-router-dom";
 
 const Account = () => {
-  const userObj = JSON.parse(localStorage.getItem("user"));
+  const userObj = JSON.parse(localStorage.getItem("landbnbUser"));
   const navigate = useNavigate();
   const logoutHandler = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem("landbnbUser");
     setTimeout(() => {
       window.location.reload();
     }, 500);

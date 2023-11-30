@@ -39,7 +39,7 @@ const PlaceForm = ({ place }) => {
 
   const isSubmitting = submit.state === "submitting";
 
-  const userObj = JSON.parse(localStorage.getItem("user"));
+  const userObj = JSON.parse(localStorage.getItem("landbnbUser"));
 
   const linkPhotoHandler = () => {
     if (photoLink) {

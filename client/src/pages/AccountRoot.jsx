@@ -14,7 +14,7 @@ const AccountRoot = () => {
 export default AccountRoot;
 
 export const loader = async () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("landbnbUser"));
   if (!user) {
     return redirect("/login");
   }

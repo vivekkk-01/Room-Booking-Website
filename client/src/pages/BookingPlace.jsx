@@ -215,7 +215,7 @@ const BookingPlace = () => {
 export default BookingPlace;
 
 export const loader = async ({ params }) => {
-  const userObj = JSON.parse(localStorage.getItem("user"));
+  const userObj = JSON.parse(localStorage.getItem("landbnbUser"));
   const bookingId = params.bookingId;
   const response = await fetch(
     `https://room-booking-backend-iq12.onrender.com/booking/${userObj.userId}/${bookingId}`,
